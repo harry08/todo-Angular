@@ -1,0 +1,33 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li class="active">Todo Lists</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Todo Lists</h3>
+            </div>
+        </div>
+		
+		<div class="row row-content">
+			<div class="col-xs-12" ng-if="!showLists">
+                <h3>{{message}}</h3>
+            </div>
+            
+			<div class="col-xs-12 col-md-9" ng-if="showLists">
+				<table class="table table-hover">
+					<tbody ng-repeat="todoList in lists" ng-click="showListTodoItems(todoList)">
+					  <tr>
+						<td class="col-xs-11">{{todoList.name}}</td>
+						<td class="col-xs-1">{{todoList.itemsDue}}</td>
+					  </tr>					  
+					</tbody>
+			  	</table> 
+				
+				<button type="button" class="btn btn-success" ng-click="addNewTodoList()">Add new List</button>			
+            </div>
+        </div>
+
+    </div>
