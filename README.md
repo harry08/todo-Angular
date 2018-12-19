@@ -1,3 +1,3 @@
 # todo-Angular
 
-Angular client for Todo App (Capstone project)
+Angular client for Todo App (Coursera Capstone project)
